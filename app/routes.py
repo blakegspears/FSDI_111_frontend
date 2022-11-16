@@ -45,3 +45,4 @@ def create_task():
         return render_template("create_success.html")
     else:
         return render_template("create_failure.html")
+

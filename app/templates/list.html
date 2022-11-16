@@ -7,11 +7,12 @@
 <h1>Tasks</h1>
 <table class="table table-dark table-striped">
     <tr>
-        <th>ID</th>
+        <th>Task</th>
         <th>Title</th>
         <th>Subtitle</th>
         <th>Body</th>
-        <th>Active</th>
+        <th>Update</th>
+        <th>Delete</th>
     </tr>
     {% for task in tasks %}
         <tr>
@@ -21,7 +22,10 @@
             </td>
             <td>{{ task["subtitle"] }}</td>
             <td>{{ task["body"] }}</td>
-            <td>{{ task["active"] }}</td>
+            <td><button class="btn" type="submit"><i class="fa-regular fa-pen-to-square"></i></button></td>
+            <td>
+                <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i></button>
+            </td>
         </tr>
     {% endfor %}
 </table>
